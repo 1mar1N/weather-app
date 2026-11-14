@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Погода</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <main>
+    <form id="weather-form" novalidate>
+      <label for="latitude">Широта</label>
+      <input id="latitude" name="latitude" inputmode="decimal" placeholder="60.17" autocomplete="off">
+      <span class="field-error" id="latitude-error"></span>
+
+      <label for="longitude">Долгота</label>
+      <input id="longitude" name="longitude" inputmode="decimal" placeholder="24.94" autocomplete="off">
+      <span class="field-error" id="longitude-error"></span>
+
+      <button type="submit">Показать погоду</button>
+      <p class="form-error" id="form-error" role="alert"></p>
+    </form>
+    <section id="widgets" aria-live="polite"></section>
+  </main>
+</body>
+</html>
